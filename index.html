@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- class="dark" -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/vendors/flatpickr.min.css" rel="stylesheet" />
+    <link href="/style.css" rel="stylesheet" />
+    <!-- <script>
+      if (
+        localStorage.getItem("dark-mode") === "false" ||
+        !("dark-mode" in localStorage)
+      ) {
+        document.querySelector("html").classList.remove("dark");
+        document.querySelector("html").style.colorScheme = "light";
+      } else {
+        document.querySelector("html").classList.add("dark");
+        document.querySelector("html").style.colorScheme = "dark";
+      }
+    </script> -->
+
+    <title>Memo</title>
+  </head>
+  <body class="dark:text-slate-400 c3jt4 c6w4h c6vqo c0ndv csf1w">
+    <!-- <script>
+      if (localStorage.getItem("sidebar-expanded") == "true") {
+        document.querySelector("body").classList.add("sidebar-expanded");
+      } else {
+        document.querySelector("body").classList.remove("sidebar-expanded");
+      }
+    </script> -->
+
+    <div id="root"></div>
+
+    <!-- <script src="./node_modules/flowbite/dist/flowbite.min.js"></script> -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
