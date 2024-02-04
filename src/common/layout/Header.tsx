@@ -53,7 +53,7 @@ export default function Header() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Link to="/">📚 Memo</Link>
+              <Link to="/">📜 La Parole</Link>
             </Box>
             <HStack
               as={"nav"}

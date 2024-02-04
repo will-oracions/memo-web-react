@@ -1,9 +1,7 @@
-import { Navigate, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import AppLayout from "../AppLayout";
 
-import EventRouter from "../modules/events/event.router";
-import { EventLayout } from "../modules/events";
-import AdminRouter from "../modules/admin/admin.router";
+import Homepage from "../modules/home/Homepage";
 
 export const router = createBrowserRouter([
   {
@@ -12,18 +10,18 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navigate to="/events" />,
+        element: <Homepage />,
       },
-      {
-        path: "events",
-        element: <EventLayout />,
-        children: [...EventRouter()],
-      },
-      {
-        path: "admin",
-        element: <EventLayout />,
-        children: [...AdminRouter()],
-      },
+      // {
+      //   path: "events",
+      //   element: <EventLayout />,
+      //   children: [...EventRouter()],
+      // },
+      // {
+      //   path: "admin",
+      //   element: <EventLayout />,
+      //   children: [...AdminRouter()],
+      // },
     ],
   },
 ]);
