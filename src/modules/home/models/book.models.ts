@@ -13,7 +13,7 @@ export interface Chapter {
 }
 
 export interface Verse {
-  name: string;
+  content: string;
   slug: string;
   chapter: Chapter;
   book: Book;

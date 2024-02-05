@@ -6,7 +6,7 @@ interface Props {
 
 const BooksList = ({ verses }: Props) => {
   const displayBooks = () =>
-    verses.map((verse, index) => <div key={index}>{verse.name}</div>);
+    verses.map((verse, index) => <div key={index}>{verse.content}</div>);
   return (
     <div>
       <div>{displayBooks()}</div>
