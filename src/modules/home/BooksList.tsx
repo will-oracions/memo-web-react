@@ -95,4 +95,33 @@ export const NEW_TESTAMENT_BOOKS_LIST: Book[] = [
   { name: "Ephesians", slug: "ephesians", chaptersCount: 6, slug2: "EPH" },
   { name: "Philippians", slug: "philippians", chaptersCount: 4, slug2: "PHP" },
   { name: "Colossians", slug: "colossians", chaptersCount: 4, slug2: "COL" },
+  {
+    name: "1 Thessalonians",
+    slug: "1thessalonians",
+    chaptersCount: 5,
+    slug2: "1TH",
+  },
+  {
+    name: "2 Thessalonians",
+    slug: "2thessalonians",
+    chaptersCount: 3,
+    slug2: "2TH",
+  },
+  { name: "1 Timothy", slug: "1timothy", chaptersCount: 6, slug2: "1TI" },
+  { name: "2 Timothy", slug: "2timothy", chaptersCount: 4, slug2: "2TI" },
+  { name: "Titus", slug: "titus", chaptersCount: 3, slug2: "TIT" },
+  { name: "Philemon", slug: "philemon", chaptersCount: 1, slug2: "PHM" },
+  { name: "Hebrews", slug: "hebrews", chaptersCount: 13, slug2: "HEB" },
+  { name: "James", slug: "james", chaptersCount: 5, slug2: "JAS" },
+  { name: "1 Peter", slug: "1peter", chaptersCount: 5, slug2: "1PE" },
+  { name: "2 Peter", slug: "2peter", chaptersCount: 3, slug2: "2PE" },
+  { name: "1 John", slug: "1john", chaptersCount: 5, slug2: "1JN" },
+  { name: "2 John", slug: "2john", chaptersCount: 1, slug2: "2JN" },
+  { name: "3 John", slug: "3john", chaptersCount: 1, slug2: "3JN" },
+  { name: "Jude", slug: "jude", chaptersCount: 1, slug2: "JUD" },
+  { name: "Revelation", slug: "revelation", chaptersCount: 22, slug2: "REV" },
 ];
+
+export const ALL_BIBLE_BOOKS = OLD_TESTAMENT_BOOKS_LIST.concat(
+  NEW_TESTAMENT_BOOKS_LIST
+);

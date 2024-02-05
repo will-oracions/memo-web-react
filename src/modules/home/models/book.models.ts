@@ -18,3 +18,14 @@ export interface Verse {
   chapter: Chapter;
   book: Book;
 }
+
+export interface BibleJsonFile {
+  name: string;
+  slug: string;
+  chapters: number;
+  verses: {
+    [key: number]: {
+      [key: number]: string;
+    };
+  };
+}
