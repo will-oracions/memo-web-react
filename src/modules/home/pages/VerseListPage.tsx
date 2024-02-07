@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { BibleJsonFile } from "../models/book.models";
 import { ALL_BIBLE_BOOKS } from "../BooksList";
 import Loader from "../../../components/Loader";
+import { CustomButton } from "../../../common/components";
 
 const VerseListPage = () => {
   const { bookSlug, chapterSlug } = useParams();
@@ -54,9 +55,15 @@ const VerseListPage = () => {
 
   return (
     <Box>
-      <Heading fontSize="2xl">
-        {book?.name_fr.toUpperCase()} {chapterSlug}
-      </Heading>
+      <Flex justifyContent="space-between" alignItems="center">
+        <Heading fontSize="2xl">
+          {book?.name_fr.toUpperCase()} {chapterSlug}
+        </Heading>
+
+        <CustomButton w="fit-content">
+          Afficher les versets par Hasard
+        </CustomButton>
+      </Flex>
 
       {showContent()}
     </Box>

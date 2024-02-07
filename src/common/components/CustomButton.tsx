@@ -17,7 +17,12 @@ const CustomButton = ({ children, theme, ...rest }: Props) => {
   //   );
   // }
   return (
-    <Button w="full" size="sm" colorScheme={"blue"} variant={"solid"} {...rest}>
+    <Button
+      w="full"
+      size="sm"
+      colorScheme={"yellow"}
+      variant={"solid"}
+      {...rest}>
       {children}
     </Button>
   );
