@@ -13,7 +13,7 @@ const CustomButton = ({ children, isLoading, to, ...rest }: Props) => {
   const button = (
     <Button
       disabled={isLoading}
-      colorScheme={"blue"}
+      colorScheme={"yellow"}
       variant={"solid"}
       // _disabled={{
       //   opacity: 0.4,
