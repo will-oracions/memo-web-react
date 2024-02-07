@@ -4,6 +4,7 @@ import { ALL_BIBLE_BOOKS } from "../BooksList";
 
 const BooksListPage = () => {
   const { bookSlug } = useParams();
+
   const book = ALL_BIBLE_BOOKS.find((book) => book.slug === bookSlug);
 
   const displayChaptersNumber = () =>
