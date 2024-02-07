@@ -30,12 +30,12 @@ export const router = createBrowserRouter([
                 children: [
                   {
                     index: true,
-                    element: <ChaptersListPage />,
-                  },
-                  {
-                    path: ":verseSlug",
                     element: <VerseListPage />,
                   },
+                  // {
+                  //   path: ":verseSlug",
+                  //   element: <VerseListPage />,
+                  // },
                 ],
               },
             ],

@@ -1,5 +1,6 @@
 export interface Book {
   name: string;
+  name_fr: string;
   slug: string;
   slug2: string;
   chaptersCount: number;

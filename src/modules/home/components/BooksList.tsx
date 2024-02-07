@@ -11,7 +11,7 @@ const BooksList = ({ books }: Props) => {
     books.map((book, index) => (
       <Box key={index}>
         <Link as={RouterLink} to={`/bible/${book.slug}`}>
-          {book.name}
+          {book.name_fr}
         </Link>
       </Box>
     ));

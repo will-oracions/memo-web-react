@@ -30,7 +30,7 @@ const BooksListPage = () => {
 
   return (
     <Box>
-      <Heading fontSize="2xl">{bookSlug?.toUpperCase()}</Heading>
+      <Heading fontSize="2xl">{book?.name_fr?.toUpperCase()}</Heading>
 
       <SimpleGrid columns={4} gap={2} my={4}>
         {displayChaptersNumber()}

@@ -2,11 +2,14 @@ import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { BibleJsonFile } from "../models/book.models";
+import { ALL_BIBLE_BOOKS } from "../BooksList";
 
 const VerseListPage = () => {
   const { bookSlug, chapterSlug, verseSlug } = useParams();
 
   const [bookData, setBookData] = React.useState<BibleJsonFile | null>(null);
+
+  const book = ALL_BIBLE_BOOKS.find((book) => book.slug === bookSlug);
 
   React.useEffect(() => {
     (async () => {
@@ -19,7 +22,7 @@ const VerseListPage = () => {
   }, []);
 
   const displayVersesContent = () => {
-    if (!chapterSlug) return <Box>No chap</Box>;
+    if (!chapterSlug) return <Box>Pas de verse defini.</Box>;
 
     const versesList = bookData?.verses[chapterSlug as any];
 
@@ -41,7 +44,7 @@ const VerseListPage = () => {
   return (
     <Box>
       <Heading fontSize="2xl">
-        {bookSlug?.toUpperCase()} {chapterSlug} : {verseSlug}
+        {book?.name_fr.toUpperCase()} {chapterSlug}
       </Heading>
 
       <Box py={4}>{displayVersesContent()}</Box>

@@ -2,10 +2,13 @@ import { Box, Flex, GridItem, Heading, SimpleGrid } from "@chakra-ui/react";
 import { Link, useParams } from "react-router-dom";
 import React from "react";
 import { BibleJsonFile } from "../models/book.models";
+import { ALL_BIBLE_BOOKS } from "../BooksList";
 
 const ChaptersListPage = () => {
   const { bookSlug, chapterSlug } = useParams();
-  // const book = ALL_BIBLE_BOOKS.find((book) => book.slug === bookSlug);
+  const book = ALL_BIBLE_BOOKS.find((book) => book.slug === bookSlug);
+
+  // console.log("book", bookSlug, book);
 
   const [bookData, setBookData] = React.useState<BibleJsonFile | null>(null);
 
@@ -20,7 +23,7 @@ const ChaptersListPage = () => {
   }, []);
 
   const displayVersesNumber = () => {
-    if (!chapterSlug) return <Box>No chap</Box>;
+    if (!chapterSlug) return <Box>Pas de chapitre defini.</Box>;
 
     const versesList = bookData?.verses[chapterSlug as any];
 
@@ -55,7 +58,7 @@ const ChaptersListPage = () => {
   return (
     <Box>
       <Heading fontSize="2xl">
-        {bookSlug?.toUpperCase()} {chapterSlug}
+        {book?.name_fr?.toUpperCase()} {chapterSlug}
       </Heading>
 
       <SimpleGrid columns={4} gap={2} my={4}>
