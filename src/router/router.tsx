@@ -3,7 +3,6 @@ import AppLayout from "../AppLayout";
 
 import Homepage from "../modules/home/Homepage";
 import VerseListPage from "../modules/home/pages/VerseListPage";
-import ChaptersListPage from "../modules/home/pages/ChaptersListPage";
 import BooksListPage from "../modules/home/pages/BooksListPage";
 import VerseReaderLayout from "../VerseReaderLayout";
 
