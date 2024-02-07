@@ -9,12 +9,14 @@ import { CustomButton } from "../../../common/components";
 const VerseListPage = () => {
   const { bookSlug, chapterSlug } = useParams();
 
+  // console.log("bookSlug: ", bookSlug, "chapter: ", chapterSlug);
+
   const [isLoading, setIsLoading] = React.useState<boolean>(true);
   const [bookData, setBookData] = React.useState<BibleJsonFile | null>(null);
 
   const book = ALL_BIBLE_BOOKS.find((book) => book.slug === bookSlug);
 
-  console.log("book: ", book?.name_fr, bookData?.verses);
+  // console.log("book: ", book?.name_fr, bookData?.verses);
 
   React.useEffect(() => {
     (async () => {
@@ -26,7 +28,7 @@ const VerseListPage = () => {
       setBookData(data);
       setIsLoading(false);
     })();
-  }, []);
+  }, [bookSlug]);
 
   const displayVersesContent = () => {
     if (!chapterSlug) return <Box>Pas de verse defini.</Box>;
